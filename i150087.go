@@ -2,9 +2,16 @@ package golangexamples
 
 func ConcatSlice(sliceToConcat []byte) string {
 
-	s := string(sliceToConcat)
+	//s := string(sliceToConcat)
+	s1 := ""
+	for i:=0;i<len(sliceToConcat);i++ {
 
-	return s
+		s1 += string(sliceToConcat[i])
+		if (i!=len(sliceToConcat)-1){
+			s1 += "-"}
+	}
+
+	return s1
 
 }
 
